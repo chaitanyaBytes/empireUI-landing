@@ -4,10 +4,10 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Github, Menu, X, Zap, Brain, Palette, Box } from "lucide-react";
+
 import { SparklesCore } from "@/components/ui/sparkles";
 import Image from "next/image";
-// import { ThemeProvider } from "@/components/theme-provider";
-// import { ModeToggle } from "@/components/ui/theme-toggle";
+import { SiteHeader } from "@/components/site/header";
 
 export default function Component() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -146,10 +146,37 @@ export default function Component() {
           </div>
         </div>
         <div className="py-24 flex w-full justify-center items-center gap-14">
-          <div className="">Vercel</div>
-          <div className="">NextJS</div>
-          <div className="">Radix UI</div>
-          <div className="">Framer Motion</div>
+          <div className="flex justify-center items-center gap-3 text-zinc-600 font-bold">
+            <Image
+              src="/icons/vercel.png"
+              width={50}
+              height={50}
+              alt="vercel"
+            />{" "}
+            Vercel
+          </div>
+          <div className="flex justify-center items-center gap-3 text-zinc-600 font-bold">
+            <Image src="/icons/next.png" width={50} height={50} alt="vercel" />{" "}
+            NextJS
+          </div>
+          <div className="flex justify-center items-center gap-3 text-zinc-600 font-bold">
+            <Image
+              src="/icons/radixBW.png"
+              width={50}
+              height={50}
+              alt="vercel"
+            />{" "}
+            Radix UI
+          </div>
+          <div className="flex justify-center items-center gap-3 text-zinc-600 font-bold">
+            <Image
+              src="/icons/framer.png"
+              width={50}
+              height={50}
+              alt="vercel"
+            />{" "}
+            Framer
+          </div>
         </div>
       </section>
       {/* Dependencies */}
