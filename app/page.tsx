@@ -12,48 +12,83 @@ export default function Component() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
+
     <div className="min-h-screen bg-zinc-950 text-white font-sans">
       {/* Hero Section */}
-      <section className="py-20 h-screen sm:py-32 grid grid-cols-2 justify-center items-center">
-        <div className="container mx-auto px-9 sm:px-6 ml-10 lg:px-8 text-left">
-          <h1 className="text-5xl sm:text-6xl w-[40rem]  font-bold mb-6 flex gap-6">
-            {/* Later change to be mini thumbnail component */}
-            <Image
-              src="/aiHero2.png"
-              width={180}
-              height={180}
-              className=" rounded-lg shadow-lg"
-              alt="Hero image"
-            />
-            <div className="flex-col items-center justify-center h-full gap-20 space-y-10">
-              <span>Intelligent UIs with EmpireUI{""}</span>
+      <section className="container py-10 h-screen sm:py-36 ">
+        <div className="grid grid-cols-2 justify-center items-center">
+          <div className="container mx-auto px-9 sm:px-6 ml-10 lg:px-8 text-left">
+            <h1 className="text-5xl sm:text-6xl w-[40rem]  font-bold mb-6 flex gap-6">
+              {/* Later change to be mini thumbnail component */}
+              <Image
+                src="/aiHero2.png"
+                width={180}
+                height={180}
+                className=" rounded-lg shadow-lg"
+                alt="Hero image"
+              />
+              <div className="flex-col items-center justify-center h-full gap-20 space-y-10">
+                <span>Intelligent UIs with EmpireUI{""}</span>
 
-              <div className="flex justify-start mr-14 space-x-4">
-                <Button className="bg-white text-black" size="lg">
-                  Get Started
-                </Button>
-                <Button size="lg" variant="outline">
-                  View Components
-                </Button>
+                <div className="flex justify-start  space-x-4">
+                  <Button size="lg">Get Started</Button>
+                  <Button size="lg" variant="outline">
+                    View Components
+                  </Button>
+                </div>
               </div>
-            </div>
-          </h1>
-          <p className="text-xl text-gray-200 mb-10 max-w-2xl w-[40rem]">
-            The AI-powered component library that adapts to your design needs.
-            Build beautiful, responsive interfaces in record time.
-          </p>
+            </h1>
+            <p className="text-xl text-gray-600 mb-10 max-w-2xl w-[40rem]">
+              The AI-powered component library that adapts to your design needs.
+              Build beautiful, responsive interfaces in record time.
+            </p>
+          </div>
+          <div className=" h-96 mr-10">
+            <SparklesCore
+              background="transparent"
+              minSize={0.2}
+              maxSize={1.8}
+              particleDensity={1200}
+              className="w-full h-full"
+              particleColor="#000000"
+            />
+          </div>
         </div>
-        <div className=" h-96 mr-10">
-          <SparklesCore
-            background="transparent"
-            minSize={0.2}
-            maxSize={1.8}
-            particleDensity={1200}
-            className="w-full h-full"
-            particleColor="#FFFFFF"
-          />
+        <div className="py-24 flex w-full justify-center items-center gap-14">
+          <div className="flex justify-center items-center gap-3 text-zinc-600 font-bold">
+            <Image
+              src="/icons/vercel.png"
+              width={50}
+              height={50}
+              alt="vercel"
+            />{" "}
+            Vercel
+          </div>
+          <div className="flex justify-center items-center gap-3 text-zinc-600 font-bold">
+            <Image src="/icons/next.png" width={50} height={50} alt="vercel" />{" "}
+            NextJS
+          </div>
+          <div className="flex justify-center items-center gap-3 text-zinc-600 font-bold">
+            <Image
+              src="/icons/radixBW.png"
+              width={50}
+              height={50}
+              alt="vercel"
+            />{" "}
+            Radix UI
+          </div>
+          <div className="flex justify-center items-center gap-3 text-zinc-600 font-bold">
+            <Image
+              src="/icons/framer.png"
+              width={50}
+              height={50}
+              alt="vercel"
+            />{" "}
+            Framer
+          </div>
         </div>
       </section>
+      {/* Dependencies */}
 
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
@@ -89,7 +124,6 @@ export default function Component() {
           </div>
         </div>
       </section>
-
       {/* Component Showcase */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -116,7 +150,6 @@ export default function Component() {
           </div>
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -135,7 +168,6 @@ export default function Component() {
           </Button>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="bg-gray-100 py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
