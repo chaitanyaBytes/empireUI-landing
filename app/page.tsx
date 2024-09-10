@@ -4,31 +4,58 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Github, Menu, X, Zap, Brain, Palette, Box } from "lucide-react";
+
+import { SparklesCore } from "@/components/ui/sparkles";
+import Image from "next/image";
 import { SiteHeader } from "@/components/site/header";
 
 export default function Component() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans">
+
+    <div className="min-h-screen bg-zinc-950 text-white font-sans">
       <SiteHeader />
 
       {/* Hero Section */}
-      <section className="py-20 sm:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl sm:text-6xl font-bold mb-6">
-            Craft Intelligent UIs with EmpireUI
+      <section className="py-20 h-screen sm:py-32 grid grid-cols-2 justify-center items-center">
+        <div className="container mx-auto px-9 sm:px-6 ml-10 lg:px-8 text-left">
+          <h1 className="text-5xl sm:text-6xl w-[40rem]  font-bold mb-6 flex gap-6">
+            {/* Later change to be mini thumbnail component */}
+            <Image
+              src="/aiHero2.png"
+              width={180}
+              height={180}
+              className=" rounded-lg shadow-lg"
+              alt="Hero image"
+            />
+            <div className="flex-col items-center justify-center h-full gap-20 space-y-10">
+              <span>Intelligent UIs with EmpireUI{""}</span>
+
+              <div className="flex justify-start mr-14 space-x-4">
+                <Button className="bg-white text-black" size="lg">
+                  Get Started
+                </Button>
+                <Button size="lg" variant="outline">
+                  View Components
+                </Button>
+              </div>
+            </div>
           </h1>
-          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-200 mb-10 max-w-2xl w-[40rem]">
             The AI-powered component library that adapts to your design needs.
             Build beautiful, responsive interfaces in record time.
           </p>
-          <div className="flex justify-center space-x-4">
-            <Button size="lg">Get Started</Button>
-            <Button size="lg" variant="outline">
-              View Components
-            </Button>
-          </div>
+        </div>
+        <div className=" h-96 mr-10">
+          <SparklesCore
+            background="transparent"
+            minSize={0.2}
+            maxSize={1.8}
+            particleDensity={1200}
+            className="w-full h-full"
+            particleColor="#FFFFFF"
+          />
         </div>
       </section>
 
