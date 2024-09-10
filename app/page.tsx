@@ -3,20 +3,16 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Github, Menu, X, Zap, Brain, Palette, Box } from "lucide-react";
+import { Zap, Palette, Box } from "lucide-react";
 
 import { SparklesCore } from "@/components/ui/sparkles";
 import Image from "next/image";
-import { SiteHeader } from "@/components/site/header";
 
 export default function Component() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-
     <div className="min-h-screen bg-zinc-950 text-white font-sans">
-      <SiteHeader />
-
       {/* Hero Section */}
       <section className="py-20 h-screen sm:py-32 grid grid-cols-2 justify-center items-center">
         <div className="container mx-auto px-9 sm:px-6 ml-10 lg:px-8 text-left">
